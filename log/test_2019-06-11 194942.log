@@ -1,0 +1,133 @@
+ Tue, 11 Jun 2019 19:49:43  INFO test_api.py test_api [ line:23 ] 正在执行第1条用例
+ Tue, 11 Jun 2019 19:49:43  INFO test_api.py test_api [ line:24 ] 测试参数：{'case_id': 1, 'func': 'register', 'describe': '注册成功-昵称为空', 'method': 'post', 'apiName': '/member/register', 'param': "{'mobilephone':'${tel}','pwd':'123456','regname':''}", 'expected': 10001}
+ Tue, 11 Jun 2019 19:49:43  INFO http_request.py http_request [ line:21 ] 发起post请求
+ Tue, 11 Jun 2019 19:49:43  INFO test_api.py test_api [ line:28 ] 返回结果：{'status': 0, 'code': '20109', 'data': None, 'msg': '手机号码格式不正确'}
+ Tue, 11 Jun 2019 19:49:43  INFO test_api.py test_api [ line:29 ] <class 'int'>
+ Tue, 11 Jun 2019 19:49:43  ERROR test_api.py test_api [ line:35 ] 断言出错啦，期望结果为：10001，实际结果为：20109
+Traceback (most recent call last):
+  File "E:\test study\project_2\QCD_API\test_case\test_api.py", line 32, in test_api
+    self.assertEqual(eval(res.json()['code']),args['expected'])
+  File "D:\python\lib\unittest\case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\python\lib\unittest\case.py", line 822, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 20109 != 10001
+ Tue, 11 Jun 2019 19:49:43  INFO test_api.py test_api [ line:23 ] 正在执行第2条用例
+ Tue, 11 Jun 2019 19:49:43  INFO test_api.py test_api [ line:24 ] 测试参数：{'case_id': 2, 'func': 'register', 'describe': '注册成功-昵称不为空', 'method': 'post', 'apiName': '/member/register', 'param': "{'mobilephone':'13311111111','pwd':'123456','regname':'呵呵哒'}", 'expected': 10001}
+ Tue, 11 Jun 2019 19:49:43  INFO http_request.py http_request [ line:21 ] 发起post请求
+ Tue, 11 Jun 2019 19:49:43  INFO test_api.py test_api [ line:28 ] 返回结果：{'status': 0, 'code': '20110', 'data': None, 'msg': '手机号码已被注册'}
+ Tue, 11 Jun 2019 19:49:43  INFO test_api.py test_api [ line:29 ] <class 'int'>
+ Tue, 11 Jun 2019 19:49:43  ERROR test_api.py test_api [ line:35 ] 断言出错啦，期望结果为：10001，实际结果为：20110
+Traceback (most recent call last):
+  File "E:\test study\project_2\QCD_API\test_case\test_api.py", line 32, in test_api
+    self.assertEqual(eval(res.json()['code']),args['expected'])
+  File "D:\python\lib\unittest\case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\python\lib\unittest\case.py", line 822, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 20110 != 10001
+ Tue, 11 Jun 2019 19:49:44  INFO test_api.py test_api [ line:23 ] 正在执行第3条用例
+ Tue, 11 Jun 2019 19:49:44  INFO test_api.py test_api [ line:24 ] 测试参数：{'case_id': 3, 'func': 'register', 'describe': '手机号已被注册', 'method': 'get', 'apiName': '/member/register', 'param': "{'mobilephone':'13311111111','pwd':'123456','regname':''}", 'expected': 20110}
+ Tue, 11 Jun 2019 19:49:44  INFO http_request.py http_request [ line:14 ] 发起get请求
+ Tue, 11 Jun 2019 19:49:44  INFO test_api.py test_api [ line:28 ] 返回结果：{'status': 0, 'code': '20110', 'data': None, 'msg': '手机号码已被注册'}
+ Tue, 11 Jun 2019 19:49:44  INFO test_api.py test_api [ line:29 ] <class 'int'>
+ Tue, 11 Jun 2019 19:49:44  INFO test_api.py test_api [ line:23 ] 正在执行第4条用例
+ Tue, 11 Jun 2019 19:49:44  INFO test_api.py test_api [ line:24 ] 测试参数：{'case_id': 4, 'func': 'register', 'describe': '注册密码为空', 'method': 'post', 'apiName': '/member/register', 'param': "{'mobilephone':'13311111110','pwd':'','regname':''}", 'expected': 20103}
+ Tue, 11 Jun 2019 19:49:44  INFO http_request.py http_request [ line:21 ] 发起post请求
+ Tue, 11 Jun 2019 19:49:44  INFO test_api.py test_api [ line:28 ] 返回结果：{'status': 0, 'code': '20103', 'data': None, 'msg': '密码不能为空'}
+ Tue, 11 Jun 2019 19:49:44  INFO test_api.py test_api [ line:29 ] <class 'int'>
+ Tue, 11 Jun 2019 19:49:44  INFO test_api.py test_api [ line:23 ] 正在执行第5条用例
+ Tue, 11 Jun 2019 19:49:44  INFO test_api.py test_api [ line:24 ] 测试参数：{'case_id': 5, 'func': 'register', 'describe': '注册手机号为空', 'method': 'get', 'apiName': '/member/register', 'param': "{'mobilephone':'','pwd':'123456','regname':''}", 'expected': 20103}
+ Tue, 11 Jun 2019 19:49:44  INFO http_request.py http_request [ line:14 ] 发起get请求
+ Tue, 11 Jun 2019 19:49:44  INFO test_api.py test_api [ line:28 ] 返回结果：{'status': 0, 'code': '20103', 'data': None, 'msg': '手机号不能为空'}
+ Tue, 11 Jun 2019 19:49:44  INFO test_api.py test_api [ line:29 ] <class 'int'>
+ Tue, 11 Jun 2019 19:49:44  INFO test_api.py test_api [ line:23 ] 正在执行第6条用例
+ Tue, 11 Jun 2019 19:49:44  INFO test_api.py test_api [ line:24 ] 测试参数：{'case_id': 6, 'func': 'register', 'describe': '密码长度小于6位', 'method': 'post', 'apiName': '/member/register', 'param': "{'mobilephone':'13311111110','pwd':'12345','regname':''}", 'expected': 20108}
+ Tue, 11 Jun 2019 19:49:44  INFO http_request.py http_request [ line:21 ] 发起post请求
+ Tue, 11 Jun 2019 19:49:44  INFO test_api.py test_api [ line:28 ] 返回结果：{'status': 0, 'code': '20108', 'data': None, 'msg': '密码长度必须为6~18'}
+ Tue, 11 Jun 2019 19:49:44  INFO test_api.py test_api [ line:29 ] <class 'int'>
+ Tue, 11 Jun 2019 19:49:44  INFO test_api.py test_api [ line:23 ] 正在执行第7条用例
+ Tue, 11 Jun 2019 19:49:44  INFO test_api.py test_api [ line:24 ] 测试参数：{'case_id': 7, 'func': 'register', 'describe': '密码长度大于18位', 'method': 'post', 'apiName': '/member/register', 'param': "{'mobilephone':'13311111110','pwd':'1234567890123456789','regname':''}", 'expected': 20108}
+ Tue, 11 Jun 2019 19:49:44  INFO http_request.py http_request [ line:21 ] 发起post请求
+ Tue, 11 Jun 2019 19:49:44  INFO test_api.py test_api [ line:28 ] 返回结果：{'status': 0, 'code': '20108', 'data': None, 'msg': '密码长度必须为6~18'}
+ Tue, 11 Jun 2019 19:49:44  INFO test_api.py test_api [ line:29 ] <class 'int'>
+ Tue, 11 Jun 2019 19:49:44  INFO test_api.py test_api [ line:23 ] 正在执行第8条用例
+ Tue, 11 Jun 2019 19:49:44  INFO test_api.py test_api [ line:24 ] 测试参数：{'case_id': 8, 'func': 'register', 'describe': '手机号格式不正确', 'method': 'post', 'apiName': '/member/register', 'param': "{'mobilephone':'13301','pwd':'123456','regname':''}", 'expected': 20109}
+ Tue, 11 Jun 2019 19:49:44  INFO http_request.py http_request [ line:21 ] 发起post请求
+ Tue, 11 Jun 2019 19:49:44  INFO test_api.py test_api [ line:28 ] 返回结果：{'status': 0, 'code': '20109', 'data': None, 'msg': '手机号码格式不正确'}
+ Tue, 11 Jun 2019 19:49:44  INFO test_api.py test_api [ line:29 ] <class 'int'>
+ Tue, 11 Jun 2019 19:49:44  INFO test_api.py test_api [ line:23 ] 正在执行第9条用例
+ Tue, 11 Jun 2019 19:49:44  INFO test_api.py test_api [ line:24 ] 测试参数：{'case_id': 9, 'func': 'login', 'describe': '登录成功', 'method': 'post', 'apiName': '/member/login', 'param': "{'mobilephone':'13311111111','pwd':'123456'}", 'expected': 10001}
+ Tue, 11 Jun 2019 19:49:44  INFO http_request.py http_request [ line:21 ] 发起post请求
+ Tue, 11 Jun 2019 19:49:44  INFO test_api.py test_api [ line:28 ] 返回结果：{'status': 1, 'code': '10001', 'data': None, 'msg': '登录成功'}
+ Tue, 11 Jun 2019 19:49:44  INFO test_api.py test_api [ line:29 ] <class 'int'>
+ Tue, 11 Jun 2019 19:49:44  INFO test_api.py test_api [ line:23 ] 正在执行第10条用例
+ Tue, 11 Jun 2019 19:49:44  INFO test_api.py test_api [ line:24 ] 测试参数：{'case_id': 10, 'func': 'login', 'describe': '手机号为空', 'method': 'post', 'apiName': '/member/login', 'param': "{'mobilephone':'','pwd':'123456'}", 'expected': 20103}
+ Tue, 11 Jun 2019 19:49:44  INFO http_request.py http_request [ line:21 ] 发起post请求
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:28 ] 返回结果：{'status': 0, 'code': '20103', 'data': None, 'msg': '手机号不能为空'}
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:29 ] <class 'int'>
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:23 ] 正在执行第11条用例
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:24 ] 测试参数：{'case_id': 11, 'func': 'login', 'describe': '密码为空', 'method': 'post', 'apiName': '/member/login', 'param': "{'mobilephone':'13311111111','pwd':''}", 'expected': 20103}
+ Tue, 11 Jun 2019 19:49:45  INFO http_request.py http_request [ line:21 ] 发起post请求
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:28 ] 返回结果：{'status': 0, 'code': '20103', 'data': None, 'msg': '密码不能为空'}
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:29 ] <class 'int'>
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:23 ] 正在执行第12条用例
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:24 ] 测试参数：{'case_id': 12, 'func': 'login', 'describe': '输入手机号为未注册的手机号', 'method': 'post', 'apiName': '/member/login', 'param': "{'mobilephone':'13311111100','pwd':'123456'}", 'expected': 20111}
+ Tue, 11 Jun 2019 19:49:45  INFO http_request.py http_request [ line:21 ] 发起post请求
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:28 ] 返回结果：{'status': 0, 'code': '20111', 'data': None, 'msg': '用户名或密码错误'}
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:29 ] <class 'int'>
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:23 ] 正在执行第13条用例
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:24 ] 测试参数：{'case_id': 13, 'func': 'login', 'describe': '输入的密码错误', 'method': 'post', 'apiName': '/member/login', 'param': "{'mobilephone':'13311111111','pwd':'123'}", 'expected': 20111}
+ Tue, 11 Jun 2019 19:49:45  INFO http_request.py http_request [ line:21 ] 发起post请求
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:28 ] 返回结果：{'status': 0, 'code': '20111', 'data': None, 'msg': '用户名或密码错误'}
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:29 ] <class 'int'>
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:23 ] 正在执行第14条用例
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:24 ] 测试参数：{'case_id': 14, 'func': 'list', 'describe': '获取用户列表-未登录', 'method': 'get', 'apiName': '/member/list', 'param': None, 'expected': 'None'}
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:23 ] 正在执行第15条用例
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:24 ] 测试参数：{'case_id': 15, 'func': 'list', 'describe': '获取用户列表-用户已登录', 'method': 'get', 'apiName': '/member/list', 'param': None, 'expected': 10001}
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:23 ] 正在执行第16条用例
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:24 ] 测试参数：{'case_id': 16, 'func': 'bidLoan', 'describe': '投资成功', 'method': 'get', 'apiName': '/member/bidLoan', 'param': "{'memberId':'${memberId}','pwd':'123456','loanId':'${loanId}','amount':'200'}", 'expected': 10001}
+ Tue, 11 Jun 2019 19:49:45  INFO http_request.py http_request [ line:14 ] 发起get请求
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:28 ] 返回结果：{'status': 0, 'code': None, 'data': None, 'msg': '抱歉，请先登录。'}
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:29 ] <class 'int'>
+ Tue, 11 Jun 2019 19:49:45  ERROR test_api.py test_api [ line:35 ] 断言出错啦，期望结果为：10001，实际结果为：None
+Traceback (most recent call last):
+  File "E:\test study\project_2\QCD_API\test_case\test_api.py", line 32, in test_api
+    self.assertEqual(eval(res.json()['code']),args['expected'])
+TypeError: eval() arg 1 must be a string, bytes or code object
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:23 ] 正在执行第17条用例
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:24 ] 测试参数：{'case_id': 17, 'func': 'bidLoan', 'describe': '投资金额大于可投金额', 'method': 'get', 'apiName': '/member/bidLoan', 'param': None, 'expected': None}
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:23 ] 正在执行第18条用例
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:24 ] 测试参数：{'case_id': 18, 'func': 'bidLoan', 'describe': '投资金额等于可投金额', 'method': 'get', 'apiName': '/member/bidLoan', 'param': None, 'expected': None}
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:23 ] 正在执行第19条用例
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:24 ] 测试参数：{'case_id': 19, 'func': 'bidLoan', 'describe': '投资金额大于余额', 'method': 'get', 'apiName': '/member/bidLoan', 'param': None, 'expected': None}
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:23 ] 正在执行第20条用例
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:24 ] 测试参数：{'case_id': 20, 'func': 'bidLoan', 'describe': '投资金额不能被100整除', 'method': 'get', 'apiName': '/member/bidLoan', 'param': None, 'expected': None}
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:23 ] 正在执行第21条用例
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:24 ] 测试参数：{'case_id': 21, 'func': 'bidLoan', 'describe': '投资金额为负数', 'method': 'get', 'apiName': '/member/bidLoan', 'param': None, 'expected': None}
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:23 ] 正在执行第22条用例
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:24 ] 测试参数：{'case_id': 22, 'func': 'bidLoan', 'describe': '投资金额为空', 'method': 'get', 'apiName': '/member/bidLoan', 'param': None, 'expected': 11003}
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:23 ] 正在执行第23条用例
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:24 ] 测试参数：{'case_id': 23, 'func': 'bidLoan', 'describe': '用户ID为空', 'method': 'get', 'apiName': '/member/bidLoan', 'param': None, 'expected': 11003}
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:23 ] 正在执行第24条用例
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:24 ] 测试参数：{'case_id': 24, 'func': 'bidLoan', 'describe': '用户密码为空', 'method': 'get', 'apiName': '/member/bidLoan', 'param': None, 'expected': 11003}
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:23 ] 正在执行第25条用例
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:24 ] 测试参数：{'case_id': 25, 'func': 'bidLoan', 'describe': '标ID为空', 'method': 'post', 'apiName': '/member/bidLoan', 'param': None, 'expected': 11003}
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:23 ] 正在执行第26条用例
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:24 ] 测试参数：{'case_id': 26, 'func': 'bidLoan', 'describe': '用户ID小于0', 'method': 'post', 'apiName': '/member/bidLoan', 'param': None, 'expected': None}
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:23 ] 正在执行第27条用例
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:24 ] 测试参数：{'case_id': 27, 'func': 'bidLoan', 'describe': '用户ID等于0', 'method': 'post', 'apiName': '/member/bidLoan', 'param': None, 'expected': None}
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:23 ] 正在执行第28条用例
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:24 ] 测试参数：{'case_id': 28, 'func': 'bidLoan', 'describe': '标ID等于0', 'method': 'post', 'apiName': '/member/bidLoan', 'param': None, 'expected': None}
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:23 ] 正在执行第29条用例
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:24 ] 测试参数：{'case_id': 29, 'func': 'bidLoan', 'describe': '标ID小于0', 'method': 'post', 'apiName': '/member/bidLoan', 'param': None, 'expected': None}
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:23 ] 正在执行第30条用例
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:24 ] 测试参数：{'case_id': 30, 'func': 'bidLoan', 'describe': '用户密码长度小于6位', 'method': 'post', 'apiName': '/member/bidLoan', 'param': None, 'expected': None}
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:23 ] 正在执行第31条用例
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:24 ] 测试参数：{'case_id': 31, 'func': 'bidLoan', 'describe': '用户密码长度大于18位', 'method': 'post', 'apiName': '/member/bidLoan', 'param': None, 'expected': None}
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:23 ] 正在执行第32条用例
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:24 ] 测试参数：{'case_id': 32, 'func': 'bidLoan', 'describe': '用户不存在', 'method': 'post', 'apiName': '/member/bidLoan', 'param': None, 'expected': None}
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:23 ] 正在执行第33条用例
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:24 ] 测试参数：{'case_id': 33, 'func': 'bidLoan', 'describe': '标不存在', 'method': 'post', 'apiName': '/member/bidLoan', 'param': None, 'expected': None}
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:23 ] 正在执行第34条用例
+ Tue, 11 Jun 2019 19:49:45  INFO test_api.py test_api [ line:24 ] 测试参数：{'case_id': 34, 'func': 'bidLoan', 'describe': '标的状态不是竞标中', 'method': 'post', 'apiName': '/member/bidLoan', 'param': None, 'expected': None}

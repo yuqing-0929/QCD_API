@@ -1,0 +1,210 @@
+ Wed, 12 Jun 2019 16:52:51  INFO test_api.py test_api [ line:28 ] 正在执行第1条用例
+ Wed, 12 Jun 2019 16:52:51  INFO test_api.py test_api [ line:29 ] 测试参数：{'case_id': 1, 'func': 'register', 'describe': '注册成功-昵称为空', 'method': 'post', 'apiName': '/member/register', 'param': "{'mobilephone':'${tel}','pwd':'123456','regname':''}", 'expected': 10001}
+ Wed, 12 Jun 2019 16:52:51  INFO http_request.py http_request [ line:21 ] 发起post请求
+ Wed, 12 Jun 2019 16:52:51  INFO test_api.py test_api [ line:33 ] 返回结果：{'status': 0, 'code': '20109', 'data': None, 'msg': '手机号码格式不正确'}
+ Wed, 12 Jun 2019 16:52:51  INFO test_api.py test_api [ line:34 ] <class 'int'>
+ Wed, 12 Jun 2019 16:52:51  INFO test_api.py test_api [ line:35 ] {}
+ Wed, 12 Jun 2019 16:52:51  ERROR test_api.py test_api [ line:45 ] 断言出错啦，期望结果为：10001，实际结果为：20109
+Traceback (most recent call last):
+  File "E:\test study\project_2\QCD_API\test_case\test_api.py", line 42, in test_api
+    self.assertEqual(eval(res.json()['code']),args['expected'])
+  File "D:\python\lib\unittest\case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\python\lib\unittest\case.py", line 822, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 20109 != 10001
+ Wed, 12 Jun 2019 16:52:51  INFO test_api.py test_api [ line:28 ] 正在执行第2条用例
+ Wed, 12 Jun 2019 16:52:51  INFO test_api.py test_api [ line:29 ] 测试参数：{'case_id': 2, 'func': 'register', 'describe': '注册成功-昵称不为空', 'method': 'post', 'apiName': '/member/register', 'param': "{'mobilephone':'13311111111','pwd':'123456','regname':'呵呵哒'}", 'expected': 10001}
+ Wed, 12 Jun 2019 16:52:51  INFO http_request.py http_request [ line:21 ] 发起post请求
+ Wed, 12 Jun 2019 16:52:51  INFO test_api.py test_api [ line:33 ] 返回结果：{'status': 0, 'code': '20110', 'data': None, 'msg': '手机号码已被注册'}
+ Wed, 12 Jun 2019 16:52:51  INFO test_api.py test_api [ line:34 ] <class 'int'>
+ Wed, 12 Jun 2019 16:52:51  INFO test_api.py test_api [ line:35 ] {}
+ Wed, 12 Jun 2019 16:52:51  ERROR test_api.py test_api [ line:45 ] 断言出错啦，期望结果为：10001，实际结果为：20110
+Traceback (most recent call last):
+  File "E:\test study\project_2\QCD_API\test_case\test_api.py", line 42, in test_api
+    self.assertEqual(eval(res.json()['code']),args['expected'])
+  File "D:\python\lib\unittest\case.py", line 829, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "D:\python\lib\unittest\case.py", line 822, in _baseAssertEqual
+    raise self.failureException(msg)
+AssertionError: 20110 != 10001
+ Wed, 12 Jun 2019 16:52:51  INFO test_api.py test_api [ line:28 ] 正在执行第3条用例
+ Wed, 12 Jun 2019 16:52:51  INFO test_api.py test_api [ line:29 ] 测试参数：{'case_id': 3, 'func': 'register', 'describe': '手机号已被注册', 'method': 'get', 'apiName': '/member/register', 'param': "{'mobilephone':'13311111111','pwd':'123456','regname':''}", 'expected': 20110}
+ Wed, 12 Jun 2019 16:52:51  INFO http_request.py http_request [ line:14 ] 发起get请求
+ Wed, 12 Jun 2019 16:52:51  INFO test_api.py test_api [ line:33 ] 返回结果：{'status': 0, 'code': '20110', 'data': None, 'msg': '手机号码已被注册'}
+ Wed, 12 Jun 2019 16:52:51  INFO test_api.py test_api [ line:34 ] <class 'int'>
+ Wed, 12 Jun 2019 16:52:51  INFO test_api.py test_api [ line:35 ] {}
+ Wed, 12 Jun 2019 16:52:51  INFO test_api.py test_api [ line:28 ] 正在执行第4条用例
+ Wed, 12 Jun 2019 16:52:51  INFO test_api.py test_api [ line:29 ] 测试参数：{'case_id': 4, 'func': 'register', 'describe': '注册密码为空', 'method': 'post', 'apiName': '/member/register', 'param': "{'mobilephone':'13311111110','pwd':'','regname':''}", 'expected': 20103}
+ Wed, 12 Jun 2019 16:52:51  INFO http_request.py http_request [ line:21 ] 发起post请求
+ Wed, 12 Jun 2019 16:52:51  INFO test_api.py test_api [ line:33 ] 返回结果：{'status': 0, 'code': '20103', 'data': None, 'msg': '密码不能为空'}
+ Wed, 12 Jun 2019 16:52:51  INFO test_api.py test_api [ line:34 ] <class 'int'>
+ Wed, 12 Jun 2019 16:52:51  INFO test_api.py test_api [ line:35 ] {}
+ Wed, 12 Jun 2019 16:52:51  INFO test_api.py test_api [ line:28 ] 正在执行第5条用例
+ Wed, 12 Jun 2019 16:52:51  INFO test_api.py test_api [ line:29 ] 测试参数：{'case_id': 5, 'func': 'register', 'describe': '注册手机号为空', 'method': 'get', 'apiName': '/member/register', 'param': "{'mobilephone':'','pwd':'123456','regname':''}", 'expected': 20103}
+ Wed, 12 Jun 2019 16:52:51  INFO http_request.py http_request [ line:14 ] 发起get请求
+ Wed, 12 Jun 2019 16:52:51  INFO test_api.py test_api [ line:33 ] 返回结果：{'status': 0, 'code': '20103', 'data': None, 'msg': '手机号不能为空'}
+ Wed, 12 Jun 2019 16:52:51  INFO test_api.py test_api [ line:34 ] <class 'int'>
+ Wed, 12 Jun 2019 16:52:51  INFO test_api.py test_api [ line:35 ] {}
+ Wed, 12 Jun 2019 16:52:51  INFO test_api.py test_api [ line:28 ] 正在执行第6条用例
+ Wed, 12 Jun 2019 16:52:51  INFO test_api.py test_api [ line:29 ] 测试参数：{'case_id': 6, 'func': 'register', 'describe': '密码长度小于6位', 'method': 'post', 'apiName': '/member/register', 'param': "{'mobilephone':'13311111110','pwd':'12345','regname':''}", 'expected': 20108}
+ Wed, 12 Jun 2019 16:52:51  INFO http_request.py http_request [ line:21 ] 发起post请求
+ Wed, 12 Jun 2019 16:52:51  INFO test_api.py test_api [ line:33 ] 返回结果：{'status': 0, 'code': '20108', 'data': None, 'msg': '密码长度必须为6~18'}
+ Wed, 12 Jun 2019 16:52:51  INFO test_api.py test_api [ line:34 ] <class 'int'>
+ Wed, 12 Jun 2019 16:52:51  INFO test_api.py test_api [ line:35 ] {}
+ Wed, 12 Jun 2019 16:52:51  INFO test_api.py test_api [ line:28 ] 正在执行第7条用例
+ Wed, 12 Jun 2019 16:52:51  INFO test_api.py test_api [ line:29 ] 测试参数：{'case_id': 7, 'func': 'register', 'describe': '密码长度大于18位', 'method': 'post', 'apiName': '/member/register', 'param': "{'mobilephone':'13311111110','pwd':'1234567890123456789','regname':''}", 'expected': 20108}
+ Wed, 12 Jun 2019 16:52:51  INFO http_request.py http_request [ line:21 ] 发起post请求
+ Wed, 12 Jun 2019 16:52:52  INFO test_api.py test_api [ line:33 ] 返回结果：{'status': 0, 'code': '20108', 'data': None, 'msg': '密码长度必须为6~18'}
+ Wed, 12 Jun 2019 16:52:52  INFO test_api.py test_api [ line:34 ] <class 'int'>
+ Wed, 12 Jun 2019 16:52:52  INFO test_api.py test_api [ line:35 ] {}
+ Wed, 12 Jun 2019 16:52:52  INFO test_api.py test_api [ line:28 ] 正在执行第8条用例
+ Wed, 12 Jun 2019 16:52:52  INFO test_api.py test_api [ line:29 ] 测试参数：{'case_id': 8, 'func': 'register', 'describe': '手机号格式不正确', 'method': 'post', 'apiName': '/member/register', 'param': "{'mobilephone':'13301','pwd':'123456','regname':''}", 'expected': 20109}
+ Wed, 12 Jun 2019 16:52:52  INFO http_request.py http_request [ line:21 ] 发起post请求
+ Wed, 12 Jun 2019 16:52:52  INFO test_api.py test_api [ line:33 ] 返回结果：{'status': 0, 'code': '20109', 'data': None, 'msg': '手机号码格式不正确'}
+ Wed, 12 Jun 2019 16:52:52  INFO test_api.py test_api [ line:34 ] <class 'int'>
+ Wed, 12 Jun 2019 16:52:52  INFO test_api.py test_api [ line:35 ] {}
+ Wed, 12 Jun 2019 16:52:52  INFO test_api.py test_api [ line:28 ] 正在执行第9条用例
+ Wed, 12 Jun 2019 16:52:52  INFO test_api.py test_api [ line:29 ] 测试参数：{'case_id': 9, 'func': 'login', 'describe': '登录成功', 'method': 'post', 'apiName': '/member/login', 'param': "{'mobilephone':'13311111111','pwd':'123456'}", 'expected': 10001}
+ Wed, 12 Jun 2019 16:52:52  INFO http_request.py http_request [ line:21 ] 发起post请求
+ Wed, 12 Jun 2019 16:52:52  INFO test_api.py test_api [ line:33 ] 返回结果：{'status': 1, 'code': '10001', 'data': None, 'msg': '登录成功'}
+ Wed, 12 Jun 2019 16:52:52  INFO test_api.py test_api [ line:34 ] <class 'int'>
+ Wed, 12 Jun 2019 16:52:52  INFO test_api.py test_api [ line:35 ] {}
+ Wed, 12 Jun 2019 16:52:52  INFO test_api.py test_api [ line:28 ] 正在执行第10条用例
+ Wed, 12 Jun 2019 16:52:52  INFO test_api.py test_api [ line:29 ] 测试参数：{'case_id': 10, 'func': 'login', 'describe': '手机号为空', 'method': 'post', 'apiName': '/member/login', 'param': "{'mobilephone':'','pwd':'123456'}", 'expected': 20103}
+ Wed, 12 Jun 2019 16:52:52  INFO http_request.py http_request [ line:21 ] 发起post请求
+ Wed, 12 Jun 2019 16:52:52  INFO test_api.py test_api [ line:33 ] 返回结果：{'status': 0, 'code': '20103', 'data': None, 'msg': '手机号不能为空'}
+ Wed, 12 Jun 2019 16:52:52  INFO test_api.py test_api [ line:34 ] <class 'int'>
+ Wed, 12 Jun 2019 16:52:52  INFO test_api.py test_api [ line:35 ] <RequestsCookieJar[<Cookie JSESSIONID=51F75797BC883D79C27C3F9525CF5C91 for test.lemonban.com/futureloan>]>
+ Wed, 12 Jun 2019 16:52:52  INFO test_api.py test_api [ line:28 ] 正在执行第11条用例
+ Wed, 12 Jun 2019 16:52:52  INFO test_api.py test_api [ line:29 ] 测试参数：{'case_id': 11, 'func': 'login', 'describe': '密码为空', 'method': 'post', 'apiName': '/member/login', 'param': "{'mobilephone':'13311111111','pwd':''}", 'expected': 20103}
+ Wed, 12 Jun 2019 16:52:52  INFO http_request.py http_request [ line:21 ] 发起post请求
+ Wed, 12 Jun 2019 16:52:52  INFO test_api.py test_api [ line:33 ] 返回结果：{'status': 0, 'code': '20103', 'data': None, 'msg': '密码不能为空'}
+ Wed, 12 Jun 2019 16:52:52  INFO test_api.py test_api [ line:34 ] <class 'int'>
+ Wed, 12 Jun 2019 16:52:52  INFO test_api.py test_api [ line:35 ] <RequestsCookieJar[<Cookie JSESSIONID=51F75797BC883D79C27C3F9525CF5C91 for test.lemonban.com/futureloan>]>
+ Wed, 12 Jun 2019 16:52:52  INFO test_api.py test_api [ line:28 ] 正在执行第12条用例
+ Wed, 12 Jun 2019 16:52:52  INFO test_api.py test_api [ line:29 ] 测试参数：{'case_id': 12, 'func': 'login', 'describe': '输入手机号为未注册的手机号', 'method': 'post', 'apiName': '/member/login', 'param': "{'mobilephone':'13311111100','pwd':'123456'}", 'expected': 20111}
+ Wed, 12 Jun 2019 16:52:52  INFO http_request.py http_request [ line:21 ] 发起post请求
+ Wed, 12 Jun 2019 16:52:52  INFO test_api.py test_api [ line:33 ] 返回结果：{'status': 0, 'code': '20111', 'data': None, 'msg': '用户名或密码错误'}
+ Wed, 12 Jun 2019 16:52:52  INFO test_api.py test_api [ line:34 ] <class 'int'>
+ Wed, 12 Jun 2019 16:52:52  INFO test_api.py test_api [ line:35 ] <RequestsCookieJar[<Cookie JSESSIONID=51F75797BC883D79C27C3F9525CF5C91 for test.lemonban.com/futureloan>]>
+ Wed, 12 Jun 2019 16:52:52  INFO test_api.py test_api [ line:28 ] 正在执行第13条用例
+ Wed, 12 Jun 2019 16:52:52  INFO test_api.py test_api [ line:29 ] 测试参数：{'case_id': 13, 'func': 'login', 'describe': '输入的密码错误', 'method': 'post', 'apiName': '/member/login', 'param': "{'mobilephone':'13311111111','pwd':'123'}", 'expected': 20111}
+ Wed, 12 Jun 2019 16:52:52  INFO http_request.py http_request [ line:21 ] 发起post请求
+ Wed, 12 Jun 2019 16:52:52  INFO test_api.py test_api [ line:33 ] 返回结果：{'status': 0, 'code': '20111', 'data': None, 'msg': '用户名或密码错误'}
+ Wed, 12 Jun 2019 16:52:52  INFO test_api.py test_api [ line:34 ] <class 'int'>
+ Wed, 12 Jun 2019 16:52:52  INFO test_api.py test_api [ line:35 ] <RequestsCookieJar[<Cookie JSESSIONID=51F75797BC883D79C27C3F9525CF5C91 for test.lemonban.com/futureloan>]>
+ Wed, 12 Jun 2019 16:52:52  INFO test_api.py test_api [ line:28 ] 正在执行第14条用例
+ Wed, 12 Jun 2019 16:52:52  INFO test_api.py test_api [ line:29 ] 测试参数：{'case_id': 14, 'func': 'recharge', 'describe': '充值成功', 'method': 'get', 'apiName': '/member/recharge', 'param': "{'mobilephone':'13311111111','amount':'5000'}", 'expected': 10001}
+ Wed, 12 Jun 2019 16:52:52  INFO http_request.py http_request [ line:14 ] 发起get请求
+ Wed, 12 Jun 2019 16:52:53  INFO test_api.py test_api [ line:33 ] 返回结果：{'status': 1, 'code': '10001', 'data': {'id': 10358, 'regname': '', 'pwd': 'E10ADC3949BA59ABBE56E057F20F883E', 'mobilephone': '13311111111', 'leaveamount': '5000.00', 'type': '1', 'regtime': '2019-06-04 11:30:15.0'}, 'msg': '充值成功'}
+ Wed, 12 Jun 2019 16:52:53  INFO test_api.py test_api [ line:34 ] <class 'int'>
+ Wed, 12 Jun 2019 16:52:53  INFO test_api.py test_api [ line:35 ] <RequestsCookieJar[<Cookie JSESSIONID=51F75797BC883D79C27C3F9525CF5C91 for test.lemonban.com/futureloan>]>
+ Wed, 12 Jun 2019 16:52:53  INFO test_api.py test_api [ line:28 ] 正在执行第15条用例
+ Wed, 12 Jun 2019 16:52:53  INFO test_api.py test_api [ line:29 ] 测试参数：{'case_id': 15, 'func': 'recharge', 'describe': '充值时未输入金额', 'method': 'post', 'apiName': '/member/recharge', 'param': "{'mobilephone':'13311111111','amount':''}", 'expected': 20115}
+ Wed, 12 Jun 2019 16:52:53  INFO http_request.py http_request [ line:21 ] 发起post请求
+ Wed, 12 Jun 2019 16:52:53  INFO test_api.py test_api [ line:33 ] 返回结果：{'status': 0, 'code': '20115', 'data': None, 'msg': '请输入金额'}
+ Wed, 12 Jun 2019 16:52:53  INFO test_api.py test_api [ line:34 ] <class 'int'>
+ Wed, 12 Jun 2019 16:52:53  INFO test_api.py test_api [ line:35 ] <RequestsCookieJar[<Cookie JSESSIONID=51F75797BC883D79C27C3F9525CF5C91 for test.lemonban.com/futureloan>]>
+ Wed, 12 Jun 2019 16:52:53  INFO test_api.py test_api [ line:28 ] 正在执行第16条用例
+ Wed, 12 Jun 2019 16:52:53  INFO test_api.py test_api [ line:29 ] 测试参数：{'case_id': 16, 'func': 'recharge', 'describe': '不输入手机号', 'method': 'post', 'apiName': '/member/recharge', 'param': "{'mobilephone':'','amount':'5000'}", 'expected': 20103}
+ Wed, 12 Jun 2019 16:52:53  INFO http_request.py http_request [ line:21 ] 发起post请求
+ Wed, 12 Jun 2019 16:52:53  INFO test_api.py test_api [ line:33 ] 返回结果：{'status': 0, 'code': '20103', 'data': None, 'msg': '手机号不能为空'}
+ Wed, 12 Jun 2019 16:52:53  INFO test_api.py test_api [ line:34 ] <class 'int'>
+ Wed, 12 Jun 2019 16:52:53  INFO test_api.py test_api [ line:35 ] <RequestsCookieJar[<Cookie JSESSIONID=51F75797BC883D79C27C3F9525CF5C91 for test.lemonban.com/futureloan>]>
+ Wed, 12 Jun 2019 16:52:53  INFO test_api.py test_api [ line:28 ] 正在执行第17条用例
+ Wed, 12 Jun 2019 16:52:53  INFO test_api.py test_api [ line:29 ] 测试参数：{'case_id': 17, 'func': 'recharge', 'describe': '不存在的会员手机账号', 'method': 'post', 'apiName': '/member/recharge', 'param': "{'mobilephone':'13322111111','amount':'5000'}", 'expected': 20104}
+ Wed, 12 Jun 2019 16:52:53  INFO http_request.py http_request [ line:21 ] 发起post请求
+ Wed, 12 Jun 2019 16:52:53  INFO test_api.py test_api [ line:33 ] 返回结果：{'status': 0, 'code': '20104', 'data': None, 'msg': '此手机号对应的会员不存在'}
+ Wed, 12 Jun 2019 16:52:53  INFO test_api.py test_api [ line:34 ] <class 'int'>
+ Wed, 12 Jun 2019 16:52:53  INFO test_api.py test_api [ line:35 ] <RequestsCookieJar[<Cookie JSESSIONID=51F75797BC883D79C27C3F9525CF5C91 for test.lemonban.com/futureloan>]>
+ Wed, 12 Jun 2019 16:52:53  INFO test_api.py test_api [ line:28 ] 正在执行第18条用例
+ Wed, 12 Jun 2019 16:52:53  INFO test_api.py test_api [ line:29 ] 测试参数：{'case_id': 18, 'func': 'recharge', 'describe': '手机格式不正确', 'method': 'post', 'apiName': '/member/recharge', 'param': "{'mobilephone':'1331111','amount':'5000'}", 'expected': 20109}
+ Wed, 12 Jun 2019 16:52:53  INFO http_request.py http_request [ line:21 ] 发起post请求
+ Wed, 12 Jun 2019 16:52:53  INFO test_api.py test_api [ line:33 ] 返回结果：{'status': 0, 'code': '20109', 'data': None, 'msg': '手机号码格式不正确'}
+ Wed, 12 Jun 2019 16:52:53  INFO test_api.py test_api [ line:34 ] <class 'int'>
+ Wed, 12 Jun 2019 16:52:53  INFO test_api.py test_api [ line:35 ] <RequestsCookieJar[<Cookie JSESSIONID=51F75797BC883D79C27C3F9525CF5C91 for test.lemonban.com/futureloan>]>
+ Wed, 12 Jun 2019 16:52:53  INFO test_api.py test_api [ line:28 ] 正在执行第19条用例
+ Wed, 12 Jun 2019 16:52:53  INFO test_api.py test_api [ line:29 ] 测试参数：{'case_id': 19, 'func': 'recharge', 'describe': '输入金额的小数超过2位', 'method': 'post', 'apiName': '/member/recharge', 'param': "{'mobilephone':'13311111111','amount':'5000.012'}", 'expected': 20116}
+ Wed, 12 Jun 2019 16:52:53  INFO http_request.py http_request [ line:21 ] 发起post请求
+ Wed, 12 Jun 2019 16:52:53  INFO test_api.py test_api [ line:33 ] 返回结果：{'status': 0, 'code': '20116', 'data': None, 'msg': '输入金额的金额小数不能超过两位'}
+ Wed, 12 Jun 2019 16:52:53  INFO test_api.py test_api [ line:34 ] <class 'int'>
+ Wed, 12 Jun 2019 16:52:53  INFO test_api.py test_api [ line:35 ] <RequestsCookieJar[<Cookie JSESSIONID=51F75797BC883D79C27C3F9525CF5C91 for test.lemonban.com/futureloan>]>
+ Wed, 12 Jun 2019 16:52:53  INFO test_api.py test_api [ line:28 ] 正在执行第20条用例
+ Wed, 12 Jun 2019 16:52:53  INFO test_api.py test_api [ line:29 ] 测试参数：{'case_id': 20, 'func': 'recharge', 'describe': '充值金额输入负数', 'method': 'post', 'apiName': '/member/recharge', 'param': "{'mobilephone':'13311111111','amount':'-5000'}", 'expected': 20117}
+ Wed, 12 Jun 2019 16:52:53  INFO http_request.py http_request [ line:21 ] 发起post请求
+ Wed, 12 Jun 2019 16:52:53  INFO test_api.py test_api [ line:33 ] 返回结果：{'status': 0, 'code': '20117', 'data': None, 'msg': '请输入范围在0到50万之间的正数金额'}
+ Wed, 12 Jun 2019 16:52:53  INFO test_api.py test_api [ line:34 ] <class 'int'>
+ Wed, 12 Jun 2019 16:52:53  INFO test_api.py test_api [ line:35 ] <RequestsCookieJar[<Cookie JSESSIONID=51F75797BC883D79C27C3F9525CF5C91 for test.lemonban.com/futureloan>]>
+ Wed, 12 Jun 2019 16:52:53  INFO test_api.py test_api [ line:28 ] 正在执行第21条用例
+ Wed, 12 Jun 2019 16:52:53  INFO test_api.py test_api [ line:29 ] 测试参数：{'case_id': 21, 'func': 'recharge', 'describe': '充值金额输入超过50万', 'method': 'post', 'apiName': '/member/recharge', 'param': "{'mobilephone':'13311111111','amount':'5000000'}", 'expected': 20117}
+ Wed, 12 Jun 2019 16:52:53  INFO http_request.py http_request [ line:21 ] 发起post请求
+ Wed, 12 Jun 2019 16:52:53  INFO test_api.py test_api [ line:33 ] 返回结果：{'status': 0, 'code': '20117', 'data': None, 'msg': '请输入范围在0到50万之间的正数金额'}
+ Wed, 12 Jun 2019 16:52:53  INFO test_api.py test_api [ line:34 ] <class 'int'>
+ Wed, 12 Jun 2019 16:52:53  INFO test_api.py test_api [ line:35 ] <RequestsCookieJar[<Cookie JSESSIONID=51F75797BC883D79C27C3F9525CF5C91 for test.lemonban.com/futureloan>]>
+ Wed, 12 Jun 2019 16:52:53  INFO test_api.py test_api [ line:28 ] 正在执行第22条用例
+ Wed, 12 Jun 2019 16:52:53  INFO test_api.py test_api [ line:29 ] 测试参数：{'case_id': 22, 'func': 'recharge', 'describe': '输入金额为非数字', 'method': 'post', 'apiName': '/member/recharge', 'param': "{'mobilephone':'13311111111','amount':'we'}", 'expected': 20118}
+ Wed, 12 Jun 2019 16:52:53  INFO http_request.py http_request [ line:21 ] 发起post请求
+ Wed, 12 Jun 2019 16:52:53  INFO test_api.py test_api [ line:33 ] 返回结果：{'status': 0, 'code': '20118', 'data': None, 'msg': '请输入数字'}
+ Wed, 12 Jun 2019 16:52:53  INFO test_api.py test_api [ line:34 ] <class 'int'>
+ Wed, 12 Jun 2019 16:52:53  INFO test_api.py test_api [ line:35 ] <RequestsCookieJar[<Cookie JSESSIONID=51F75797BC883D79C27C3F9525CF5C91 for test.lemonban.com/futureloan>]>
+ Wed, 12 Jun 2019 16:52:53  INFO test_api.py test_api [ line:28 ] 正在执行第23条用例
+ Wed, 12 Jun 2019 16:52:53  INFO test_api.py test_api [ line:29 ] 测试参数：{'case_id': 23, 'func': 'withdraw', 'describe': '取现成功', 'method': 'post', 'apiName': '/member/withdraw', 'param': "{'mobilephone':'13311111111','amount':'500'}", 'expected': 10001}
+ Wed, 12 Jun 2019 16:52:53  INFO http_request.py http_request [ line:21 ] 发起post请求
+ Wed, 12 Jun 2019 16:52:54  INFO test_api.py test_api [ line:33 ] 返回结果：{'status': 1, 'code': '10001', 'data': {'id': 10358, 'regname': '', 'pwd': 'E10ADC3949BA59ABBE56E057F20F883E', 'mobilephone': '13311111111', 'leaveamount': '4500.00', 'type': '1', 'regtime': '2019-06-04 11:30:15.0'}, 'msg': '取现成功'}
+ Wed, 12 Jun 2019 16:52:54  INFO test_api.py test_api [ line:34 ] <class 'int'>
+ Wed, 12 Jun 2019 16:52:54  INFO test_api.py test_api [ line:35 ] <RequestsCookieJar[<Cookie JSESSIONID=51F75797BC883D79C27C3F9525CF5C91 for test.lemonban.com/futureloan>]>
+ Wed, 12 Jun 2019 16:52:54  INFO test_api.py test_api [ line:28 ] 正在执行第24条用例
+ Wed, 12 Jun 2019 16:52:54  INFO test_api.py test_api [ line:29 ] 测试参数：{'case_id': 24, 'func': 'withdraw', 'describe': '取现时未输入金额', 'method': 'post', 'apiName': '/member/withdraw', 'param': "{'mobilephone':'13311111111','amount':''}", 'expected': 20115}
+ Wed, 12 Jun 2019 16:52:54  INFO http_request.py http_request [ line:21 ] 发起post请求
+ Wed, 12 Jun 2019 16:52:54  INFO test_api.py test_api [ line:33 ] 返回结果：{'status': 0, 'code': '20115', 'data': None, 'msg': '请输入金额'}
+ Wed, 12 Jun 2019 16:52:54  INFO test_api.py test_api [ line:34 ] <class 'int'>
+ Wed, 12 Jun 2019 16:52:54  INFO test_api.py test_api [ line:35 ] <RequestsCookieJar[<Cookie JSESSIONID=51F75797BC883D79C27C3F9525CF5C91 for test.lemonban.com/futureloan>]>
+ Wed, 12 Jun 2019 16:52:54  INFO test_api.py test_api [ line:28 ] 正在执行第25条用例
+ Wed, 12 Jun 2019 16:52:54  INFO test_api.py test_api [ line:29 ] 测试参数：{'case_id': 25, 'func': 'withdraw', 'describe': '不输入手机号', 'method': 'post', 'apiName': '/member/withdraw', 'param': "{'mobilephone':'','amount':'500'}", 'expected': 20103}
+ Wed, 12 Jun 2019 16:52:54  INFO http_request.py http_request [ line:21 ] 发起post请求
+ Wed, 12 Jun 2019 16:52:54  INFO test_api.py test_api [ line:33 ] 返回结果：{'status': 0, 'code': '20103', 'data': None, 'msg': '手机号不能为空'}
+ Wed, 12 Jun 2019 16:52:54  INFO test_api.py test_api [ line:34 ] <class 'int'>
+ Wed, 12 Jun 2019 16:52:54  INFO test_api.py test_api [ line:35 ] <RequestsCookieJar[<Cookie JSESSIONID=51F75797BC883D79C27C3F9525CF5C91 for test.lemonban.com/futureloan>]>
+ Wed, 12 Jun 2019 16:52:54  INFO test_api.py test_api [ line:28 ] 正在执行第26条用例
+ Wed, 12 Jun 2019 16:52:54  INFO test_api.py test_api [ line:29 ] 测试参数：{'case_id': 26, 'func': 'withdraw', 'describe': '不存在的会员手机账号', 'method': 'post', 'apiName': '/member/withdraw', 'param': "{'mobilephone':'13322111111','amount':'500'}", 'expected': 20104}
+ Wed, 12 Jun 2019 16:52:54  INFO http_request.py http_request [ line:21 ] 发起post请求
+ Wed, 12 Jun 2019 16:52:54  INFO test_api.py test_api [ line:33 ] 返回结果：{'status': 1, 'code': '20104', 'data': None, 'msg': '此手机号对应的会员不存在'}
+ Wed, 12 Jun 2019 16:52:54  INFO test_api.py test_api [ line:34 ] <class 'int'>
+ Wed, 12 Jun 2019 16:52:54  INFO test_api.py test_api [ line:35 ] <RequestsCookieJar[<Cookie JSESSIONID=51F75797BC883D79C27C3F9525CF5C91 for test.lemonban.com/futureloan>]>
+ Wed, 12 Jun 2019 16:52:54  INFO test_api.py test_api [ line:28 ] 正在执行第27条用例
+ Wed, 12 Jun 2019 16:52:54  INFO test_api.py test_api [ line:29 ] 测试参数：{'case_id': 27, 'func': 'withdraw', 'describe': '手机格式不正确', 'method': 'post', 'apiName': '/member/withdraw', 'param': "{'mobilephone':'1331111','amount':'500'}", 'expected': 20109}
+ Wed, 12 Jun 2019 16:52:54  INFO http_request.py http_request [ line:21 ] 发起post请求
+ Wed, 12 Jun 2019 16:52:54  INFO test_api.py test_api [ line:33 ] 返回结果：{'status': 0, 'code': '20109', 'data': None, 'msg': '手机号码格式不正确'}
+ Wed, 12 Jun 2019 16:52:54  INFO test_api.py test_api [ line:34 ] <class 'int'>
+ Wed, 12 Jun 2019 16:52:54  INFO test_api.py test_api [ line:35 ] <RequestsCookieJar[<Cookie JSESSIONID=51F75797BC883D79C27C3F9525CF5C91 for test.lemonban.com/futureloan>]>
+ Wed, 12 Jun 2019 16:52:54  INFO test_api.py test_api [ line:28 ] 正在执行第28条用例
+ Wed, 12 Jun 2019 16:52:54  INFO test_api.py test_api [ line:29 ] 测试参数：{'case_id': 28, 'func': 'withdraw', 'describe': '输入金额的小数超过2位', 'method': 'post', 'apiName': '/member/withdraw', 'param': "{'mobilephone':'13311111111','amount':'500.012'}", 'expected': 20116}
+ Wed, 12 Jun 2019 16:52:54  INFO http_request.py http_request [ line:21 ] 发起post请求
+ Wed, 12 Jun 2019 16:52:54  INFO test_api.py test_api [ line:33 ] 返回结果：{'status': 0, 'code': '20116', 'data': None, 'msg': '输入金额的金额小数不能超过两位'}
+ Wed, 12 Jun 2019 16:52:54  INFO test_api.py test_api [ line:34 ] <class 'int'>
+ Wed, 12 Jun 2019 16:52:54  INFO test_api.py test_api [ line:35 ] <RequestsCookieJar[<Cookie JSESSIONID=51F75797BC883D79C27C3F9525CF5C91 for test.lemonban.com/futureloan>]>
+ Wed, 12 Jun 2019 16:52:54  INFO test_api.py test_api [ line:28 ] 正在执行第29条用例
+ Wed, 12 Jun 2019 16:52:54  INFO test_api.py test_api [ line:29 ] 测试参数：{'case_id': 29, 'func': 'withdraw', 'describe': '取现金额输入负数', 'method': 'post', 'apiName': '/member/withdraw', 'param': "{'mobilephone':'13311111111','amount':'-500'}", 'expected': 20117}
+ Wed, 12 Jun 2019 16:52:54  INFO http_request.py http_request [ line:21 ] 发起post请求
+ Wed, 12 Jun 2019 16:52:54  INFO test_api.py test_api [ line:33 ] 返回结果：{'status': 0, 'code': '20117', 'data': None, 'msg': '请输入范围在0到50万之间的正数金额'}
+ Wed, 12 Jun 2019 16:52:54  INFO test_api.py test_api [ line:34 ] <class 'int'>
+ Wed, 12 Jun 2019 16:52:54  INFO test_api.py test_api [ line:35 ] <RequestsCookieJar[<Cookie JSESSIONID=51F75797BC883D79C27C3F9525CF5C91 for test.lemonban.com/futureloan>]>
+ Wed, 12 Jun 2019 16:52:54  INFO test_api.py test_api [ line:28 ] 正在执行第30条用例
+ Wed, 12 Jun 2019 16:52:54  INFO test_api.py test_api [ line:29 ] 测试参数：{'case_id': 30, 'func': 'withdraw', 'describe': '取现金额输入超过50万', 'method': 'post', 'apiName': '/member/withdraw', 'param': "{'mobilephone':'13311111111','amount':'5000000'}", 'expected': 20117}
+ Wed, 12 Jun 2019 16:52:54  INFO http_request.py http_request [ line:21 ] 发起post请求
+ Wed, 12 Jun 2019 16:52:55  INFO test_api.py test_api [ line:33 ] 返回结果：{'status': 0, 'code': '20117', 'data': None, 'msg': '请输入范围在0到50万之间的正数金额'}
+ Wed, 12 Jun 2019 16:52:55  INFO test_api.py test_api [ line:34 ] <class 'int'>
+ Wed, 12 Jun 2019 16:52:55  INFO test_api.py test_api [ line:35 ] <RequestsCookieJar[<Cookie JSESSIONID=51F75797BC883D79C27C3F9525CF5C91 for test.lemonban.com/futureloan>]>
+ Wed, 12 Jun 2019 16:52:55  INFO test_api.py test_api [ line:28 ] 正在执行第31条用例
+ Wed, 12 Jun 2019 16:52:55  INFO test_api.py test_api [ line:29 ] 测试参数：{'case_id': 31, 'func': 'withdraw', 'describe': '输入金额为非数字', 'method': 'post', 'apiName': '/member/withdraw', 'param': "{'mobilephone':'13311111111','amount':'we'}", 'expected': 20118}
+ Wed, 12 Jun 2019 16:52:55  INFO http_request.py http_request [ line:21 ] 发起post请求
+ Wed, 12 Jun 2019 16:52:55  INFO test_api.py test_api [ line:33 ] 返回结果：{'status': 0, 'code': '20118', 'data': None, 'msg': '请输入数字'}
+ Wed, 12 Jun 2019 16:52:55  INFO test_api.py test_api [ line:34 ] <class 'int'>
+ Wed, 12 Jun 2019 16:52:55  INFO test_api.py test_api [ line:35 ] <RequestsCookieJar[<Cookie JSESSIONID=51F75797BC883D79C27C3F9525CF5C91 for test.lemonban.com/futureloan>]>
+ Wed, 12 Jun 2019 16:52:55  INFO test_api.py test_api [ line:28 ] 正在执行第32条用例
+ Wed, 12 Jun 2019 16:52:55  INFO test_api.py test_api [ line:29 ] 测试参数：{'case_id': 32, 'func': 'withdraw', 'describe': '输入金额大于账户余额', 'method': 'post', 'apiName': '/member/withdraw', 'param': "{'mobilephone':'13311111111','amount':'6000'}", 'expected': 20119}
+ Wed, 12 Jun 2019 16:52:55  INFO http_request.py http_request [ line:21 ] 发起post请求
+ Wed, 12 Jun 2019 16:52:55  INFO test_api.py test_api [ line:33 ] 返回结果：{'status': 1, 'code': '20119', 'data': None, 'msg': '余额不足，请修改提现额度'}
+ Wed, 12 Jun 2019 16:52:55  INFO test_api.py test_api [ line:34 ] <class 'int'>
+ Wed, 12 Jun 2019 16:52:55  INFO test_api.py test_api [ line:35 ] <RequestsCookieJar[<Cookie JSESSIONID=51F75797BC883D79C27C3F9525CF5C91 for test.lemonban.com/futureloan>]>
